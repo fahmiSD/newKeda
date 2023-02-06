@@ -1,7 +1,7 @@
 {% extends 'base.html' %} {% load static %} {% block content %}
 <div>
    {% comment %} banner  {% endcomment %}
-        <div style="background-image: url('{% static "image/public/BackgroundHomeDark.svg" %}')" class="h-[646px] hidden md:block">
+        <div style="background-image: url('{% static "image/public/BackgroundHomeDark.svg" %}')" class="h-[646px] hidden md:flex justify-center bg-no-repeat bg-center bg-cover">
           <div class="col-span-3 container md:px-20 px-10 pt-32">
             <div class="">
               <img src="{% static "image/public/logoHomePage.svg" %}" alt="logo" class="mb-6" width={448} height={254}/>
@@ -10,7 +10,7 @@
               <button onclick="window.location.href = '{% url "consultation" %}';" class="md:px-12 md:py-4 py-2 px-5 border text-2xl font-bold bg-[#d20008] border-[#d20008] text-white rounded  hover:bg-[#b3020f] hover:border-[#d20008] transition duration-300">Book a chat</button>
             </div>
         </div>
-        <div style="background-image: url('{% static "image/public/bgIndexSmall.svg" %}')" class="h-[646px] md:hidden bg-center bg-cover">
+        <div style="background-image: url('{% static "image/public/bgIndexSmall.svg" %}')" class="h-[646px] md:hidden bg-center bg-cover bg-no-repeat">
           <div class="col-span-3 container md:px-20 px-10 pt-32">
             <div class="pr-5">
               <img src="{% static "image/public/logoHomePage.svg" %}" alt="logo" class="mb-6" width={448} height={254}/>
@@ -20,15 +20,15 @@
             </div>
         </div>
     {% comment %} quote {% endcomment %}
-        <div style="" class="h-[763px] shadow-black test" id="Test">
-          <div class="container md:px-28 md:pt-72 px-5 pt-24">
+        <div style="" class="h-[763px] shadow-black test bg-no-repeat bg-center bg-cover" id="Test">
+          <div class="md:px-28 md:pt-72 px-5 pt-24 flex justify-center">
             <p class="md:text-4xl text-3xl font-bold leading-normal italic">"Diawali dengan perkumpulan programmer yang ahli dari Amerika, <span class="text-[#d20008]">KeDA Tech</span> berkomitmen untuk membantu revolusi bisnis Anda dan mempersiapkan teknologi yang pas untuk Anda menghadapi tantangan bisnis di era digital"</p>
           </div>
         </div>
     {% comment %} prosess  {% endcomment %}
         <div class="bg-[#fbfbfb]">
           <div class=" md:px-10 px-5 py-14">
-            <div class="md:grid md:grid-cols-2 md:gap-14">
+            <div class="md:grid md:grid-cols-2 place-content-center place-items-center md:gap-14">
               <p class="md:text-3xl md:hidden text-xl font-semibold mb-7">Proses yang Kami Lakukan</p>
               <div class="md:col-span-1 hidden md:block">
                 <img src="{% static "image/public/homeProcess1.svg" %}" alt="" className=" object-cover"/>
@@ -36,7 +36,7 @@
               <div class="md:hidden">
                 <img src="{% static "image/public/homeProcess.svg" %}" alt="" className=" object-cover"/>
               </div>
-              <div class="md:mt-36 md:pl-5 col-span-1 mt-5 md-mt-0">
+              <div class="md:pl-5 col-span-1 mt-5">
                 <p class="md:text-3xl hidden md:block text-xl font-semibold mb-7">Proses yang Kami Lakukan</p>
                 <p class="md:text-4xl text-2xl font-bold mb-5">Kami mandengar dan paham kebutuhan bisnis Anda</p>
                 <button onclick="window.location.href = '{% url "processOverview" %}';" class="md:px-24 px-10 py-2 border text-lg font-bold bg-[#d20008] border-[#d20008] text-white rounded hover:bg-[#b3020f] hover:border-[#d20008] transition duration-300">Detail</button>
@@ -80,10 +80,10 @@
           </div>
         </div>
     {% comment %} Our Project {% endcomment %}
-        <div class="bg-white  ">
-          <div class="container px-20 py-14">
+        <div class="bg-white hidden md:block">
+          <div class="px-20 py-14 m-0">
             <h1 class="text-center text-3xl md:text-6xl font-bold mb-14">Proyek Kami</h1>
-            <div class="md:grid md:grid-cols-3 hidden">
+            <div class="md:grid md:grid-cols-3 place-content-center place-items-center hidden">
               <div class="block max-w-xs py-5 bg-white shadow-gray-500 shadow-md hover:shadow-2xl hover:shadow-black transition duration-300 cursor-pointer">
                 <div>
                   <p class="px-6 text-xl font-semibold mb-5">Pengembangan Website</p>
@@ -123,8 +123,70 @@
             </div>
           </div>
         </div>
+    {% comment %} Our Project Mobile{% endcomment %}
+        <div id="carouselExampleCaptions" class="carousel slide relative md:hidden" data-bs-ride="carousel">
+          <h1 class="text-center text-3xl md:text-6xl font-bold">Proyek Kami</h1>
+          <div class="carousel-indicators absolute right-0 bottom-0 left-0 flex justify-center p-0 mb-4">
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselExampleCaptions"
+              data-bs-slide-to="3"
+              aria-label="Slide 4"
+            ></button>
+          </div>
+          <div class="carousel-inner relative w-full overflow-hidden">
+            <div class="carousel-item active relative float-left w-full">
+              <div class="py-10 px-10">
+                <div style="background-image: url('https://mdbootstrap.com/img/Photos/Slides/img%20(15).jpg')" class="h-[280px]">
+                  <img src=""/>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item relative float-left w-full">
+              <div class="py-10 px-10">
+                <div style="background-image: url('https://mdbootstrap.com/img/Photos/Slides/img%20(15).jpg')" class="h-[280px]">
+                  <img src=""/>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item relative float-left w-full">
+              <div class="py-10 px-10">
+                <div style="background-image: url('https://mdbootstrap.com/img/Photos/Slides/img%20(15).jpg')" class="h-[280px]">
+                  <img src=""/>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item relative float-left w-full">
+              <div class="py-10 px-10">
+                <div style="background-image: url('https://mdbootstrap.com/img/Photos/Slides/img%20(15).jpg')" class="h-[280px]">
+                  <img src=""/>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
     {% comment %} Digital Transformaton  {% endcomment %}
-        <div style="" class="md:h-[283px] h-[656px] test2">
+        <div class="md:h-[283px] h-[656px]  test2 bg-no-repeat bg-center bg-cover">
           <div class=" md:px-20 px-10 py-16">
             <img src="{% static "image/public/YourDigitalTransfoemationPartner.svg" %}" alt="" class="hidden md:block"/>
             <img src="{% static "image/public/YourDigitalTransfoemationPartnerSmall.svg" %}" width={312} alt="" class="md:hidden"/>
@@ -163,8 +225,8 @@
           </div>
         </div>
    {% comment %} after footer {% endcomment %}
-        <div style="background-image: url('{% static "image/public/bgAfterFooterGreen.svg" %}')" class="h-[720px] shadow-black hidden md:block">
-          <div class="container px-64 pt-72">
+        <div style="background-image: url('{% static "image/public/bgAfterFooterGreen.svg" %}')" class="h-[720px] shadow-black hidden md:flex justify-center items-center bg-no-repeat bg-center bg-cover">
+          <div class="">
             <h1 class="text-5xl font-bold mb-4">Tetap Terhubung Bersama Kami</h1>
             <p class="text-2xl pr-20 mb-4">Sign up for the lat­est up­dates to our Way of Working, case stud­ies, and more.</p>
             <div>
