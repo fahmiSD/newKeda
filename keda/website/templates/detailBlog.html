@@ -12,11 +12,11 @@
                 </div>
             </div>
         </div>
-        <div class="col-span-3 bg-[#f9f9f9] p-5 hidden md:block">
+        <div class="col-span-3 bg-[#f9f9f9] p-5 hidden md:block rounded-sm">
             <h1 class="text-2xl text-center font-semibold mb-4">Trending Article</h1>
             {% for related_blog in related_blogs %}
-            <div class="grid gap-2">
-                <img src="{{ related_blog.image_blog.url }}" alt="" class="w-full"/>
+            <div class="grid gap-2 mb-4 cursor-pointer">
+                <img src="{{ related_blog.image_blog.url }}" alt="" class="w-[246px] h[177px] object-center object-cover"/>
                 <p style="background-color : {{ related_blog.blog_tag.color_id.hex_code }}" class="text-white rounded-full py-1 px-4 w-fit">{{related_blog.blog_tag}}</p>
                 <h3 class="text-xl font-bold">{{related_blog.blog_header}}</h3>
                 <p>{{related_blog.description|safe|truncatechars:100}}</p>

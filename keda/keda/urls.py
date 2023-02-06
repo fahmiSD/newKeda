@@ -37,6 +37,8 @@ urlpatterns = [
     path('aboutCareer/', aboutCareer, name='aboutCareer'),
     path('aboutTechnologies/', aboutTechnologies, name='aboutTechnologies'),
     path('detailTechnologies/', detailTechnologies, name='detailTechnologies'),
+    path('detailMysql/', detailMysql, name='detailMysql'),
+    path('detailPython/', detailPython, name='detailPython'),
     path('detailBlog/<slug:slug_blog>', detailBlog, name='detailBlog'),
     path('project/', project, name='project'),
     path('detailProject/', detailProject, name='detailProject'),
@@ -52,5 +54,7 @@ urlpatterns = [
 ]
 
 if settings.DEBUG:
-    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
-    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    urlpatterns += static(settings.MEDIA_URL,
+                          document_root=settings.MEDIA_ROOT)
+    urlpatterns += static(settings.STATIC_URL,
+                          document_root=settings.STATIC_ROOT)
