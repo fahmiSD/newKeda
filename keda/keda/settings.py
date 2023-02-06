@@ -52,7 +52,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'website',
     'phonenumber_field',
-    'ckeditor', 
+    'ckeditor',
     'ckeditor_uploader',
     'tailwind',
     'theme',
@@ -145,7 +145,7 @@ STATIC_URL = 'theme/static/'
 
 # STATICFILES_DIRS = [
 #     BASE_DIR / 'theme/static/',
-# ] 
+# ]
 
 STATIC_ROOT = BASE_DIR / 'theme/static'
 
@@ -156,7 +156,7 @@ MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
 # Default primary key field type
 # https://docs.djangoproject.com/en/dev/ref/settings/#default-auto-field
-CKEDITOR_UPLOAD_PATH="uploads/"
+CKEDITOR_UPLOAD_PATH = "uploads/"
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
@@ -184,42 +184,46 @@ JAZZMIN_SETTINGS = {
 
     "order_with_respect_to": ['Candidates'],
 
-    #"search_model": ["website.Blog","website.Candidate","website.Subscription"],
-    
+    # "search_model": ["website.Blog","website.Candidate","website.Subscription"],
+
 
 }
 
 CKEDITOR_CONFIGS = {
     'default': {
-     
+
         'toolbar_Custom': [
-            {'name': 'document', 'items': ['Source', '-', 'Save', 'NewPage', 'Preview', 'Print', '-', 'Templates']},
-            {'name': 'clipboard', 'items': ['Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord', '-', 'Undo', 'Redo']},
-            {'name': 'editing', 'items': ['Find', 'Replace', '-', 'SelectAll']},
+            {'name': 'document', 'items': [
+                'Source', '-', 'Save', 'NewPage', 'Preview', 'Print', '-', 'Templates']},
+            {'name': 'clipboard', 'items': [
+                'Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord', '-', 'Undo', 'Redo']},
+            {'name': 'editing', 'items': [
+                'Find', 'Replace', '-', 'SelectAll']},
             {'name': 'forms',
              'items': ['Checkbox', 'Radio']},
             {'name': 'basicstyles',
-             'items': ['Bold', 'Italic', 'Underline', 'Strike', 'Subscript', 'Superscript', '-', 'RemoveFormat','Maximize', 'ShowBlocks']},
+             'items': ['Bold', 'Italic', 'Underline', 'Strike', 'Subscript', 'Superscript', '-', 'RemoveFormat', 'Maximize', 'ShowBlocks']},
             {'name': 'paragraph',
              'items': ['NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'Blockquote', '-',
                        'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock', '-', 'BidiLtr', 'BidiRtl']},
             {'name': 'links', 'items': ['Link', 'Unlink']},
-            {'name': 'styles', 'items': ['Styles', 'Format', 'Font', 'FontSize']},
+            {'name': 'styles', 'items': [
+                'Styles', 'Format', 'Font', 'FontSize']},
             {'name': 'colors', 'items': ['TextColor']},
-             # put this to force next toolbar on new line
-            
+            # put this to force next toolbar on new line
+
         ],
         'toolbar': 'Custom',  # put selected toolbar config here
-        'toolbarGroups': [{ 'name': 'document', 'groups': [ 'mode', 'document', 'doctools' ] }],
+        'toolbarGroups': [{'name': 'document', 'groups': ['mode', 'document', 'doctools']}],
         'height': 400,
-         'width': '100%',
+        'width': '100%',
         'filebrowserWindowHeight': 725,
         'filebrowserWindowWidth': 940,
         'toolbarCanCollapse': True,
         'mathJaxLib': '//cdn.mathjax.org/mathjax/2.2-latest/MathJax.js?config=TeX-AMS_HTML',
         'tabSpaces': 4,
         'extraPlugins': ','.join([
-            #'uploadimage', # the upload image feature
+            # 'uploadimage', # the upload image feature
             # your extra plugins here
             'div',
             'autolink',
@@ -237,4 +241,3 @@ CKEDITOR_CONFIGS = {
         ]),
     }
 }
-
