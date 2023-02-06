@@ -1050,6 +1050,10 @@ select {
   height: 880px;
 }
 
+.h-\[280px\] {
+  height: 280px;
+}
+
 .w-\[72px\] {
   width: 72px;
 }
@@ -1209,6 +1213,18 @@ select {
 
 .w-\[176px\] {
   width: 176px;
+}
+
+.w-\[246px\] {
+  width: 246px;
+}
+
+.w-\[230px\] {
+  width: 230px;
+}
+
+.w-\[274px\] {
+  width: 274px;
 }
 
 .max-w-7xl {
@@ -1719,6 +1735,11 @@ select {
 .py-8 {
   padding-top: 2rem;
   padding-bottom: 2rem;
+}
+
+.py-7 {
+  padding-top: 1.75rem;
+  padding-bottom: 1.75rem;
 }
 
 .pl-3 {
@@ -2236,6 +2257,10 @@ select {
     height: 283px;
   }
 
+  .md\:h-\[636px\] {
+    height: 636px;
+  }
+
   .md\:w-\[194px\] {
     width: 194px;
   }
@@ -2298,6 +2323,14 @@ select {
 
   .md\:w-\[173px\] {
     width: 173px;
+  }
+
+  .md\:w-\[360px\] {
+    width: 360px;
+  }
+
+  .md\:w-\[409px\] {
+    width: 409px;
   }
 
   .md\:grid-cols-2 {
@@ -2474,6 +2507,11 @@ select {
     padding-right: 7rem;
   }
 
+  .md\:px-5 {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+
   .md\:pl-12 {
     padding-left: 3rem;
   }
@@ -2560,6 +2598,10 @@ select {
 
   .md\:pt-64 {
     padding-top: 16rem;
+  }
+
+  .md\:pr-3 {
+    padding-right: 0.75rem;
   }
 
   .md\:text-left {

@@ -11,7 +11,7 @@
         </div>
       {% comment %} Form Question  {% endcomment %}
         <div class="bg-white md:px-14 md:py-10 px-6">
-            <div class="md:grid grid-cols-2 gap-5">
+            <div class="md:grid grid-cols-2 gap-5 place-content-center place-items-center">
               <div>
                 <p style="color: rgb(16 185 129);" class="text-xs italic">
                   {{ success }}
@@ -148,7 +148,7 @@
           </div>
         </div>
     {% comment %} Digital Transformation Partner {% endcomment %}
-      <div style="background-image: url('{% static "image/public/backgroundDigitalTransformationLime.svg" %}')" class="h-[283px] hidden md:block">
+      <div style="background-image: url('{% static "image/public/backgroundDigitalTransformationLime.svg" %}')" class="h-[283px] hidden md:block bg-no-repeat bg-center bg-cover">
           <div class="container px-20 py-16">
             <img src="{% static "image/public/YourDigitalTransfoemationPartner.svg" %}" alt="" />
             <Button onclick="window.location.href = '{% url "consultation" %}';" class="ml-6 mt-6 px-7 py-5 border bg-[#d20008] text-xl text-white rounded-sm hover:bg-[#b3020f] font-medium transition duration-300">Book a chat</Button>
@@ -192,8 +192,8 @@
       </div>
     </div>
     {% comment %} After Footer {% endcomment %}
-        <div style="background-image: url('{% static "image/public/bgAfterFooterLime.svg" %}')" class="h-[720px] shadow-black hidden md:block">
-          <div class="container px-64 pt-72">
+        <div style="background-image: url('{% static "image/public/bgAfterFooterLime.svg" %}')" class="h-[720px] shadow-black hidden md:flex justify-center items-center bg-no-repeat bg-center bg-cover">
+          <div class="`">
             <h1 class="text-5xl font-bold mb-4">Tetap Terhubung Bersama Kami</h1>
             <p class="text-2xl pr-20 mb-4">Sign up for the lat­est up­dates to our Way of Working, case stud­ies, and more.</p>
             <div>

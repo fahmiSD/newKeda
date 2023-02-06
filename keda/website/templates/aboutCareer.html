@@ -2,7 +2,7 @@
     <div>
     {% comment %} Banner Careers  {% endcomment %}
         <div class="bg-white h-[641px] px-10 py-10 hidden md:block">
-            <div class="grid grid-cols-5 py-28 px-10">
+            <div class="grid grid-cols-5 py-28 px-10 place-content-center place-items-center">
                 <img src="{% static "image/public/imgCareer.svg" %}" alt="" class="w-[409px] col-span-2"/>
                 <div class="col-span-3 mt-12 pl-8">
                     <h1 class="text-5xl font-bold mb-5">Careers</h1>
@@ -38,7 +38,7 @@
                 <p class="pr-4 text-2xl font-bold">1/6</p>
                 <img src="{% static "image/public/iconDetailTechnologies.svg" %}" alt="" />
             </div>
-            <div class="bg-white md:grid md:grid-cols-2 md:py-14 pt-14">
+            <div class="bg-white md:grid md:grid-cols-2 md:py-14 pt-14 place-content-center place-items-center">
                 <div class="md:hidden">
                   <img src="{% static "image/public/workFromAnywhere.svg" %}" alt="" class="w-[490px]"/>
                 </div>
@@ -116,7 +116,7 @@
             </div>
         </div>
     {% comment %} Digital Transformation {% endcomment %}
-        <div style="background-image: url('{% static "image/public/backgroundDigitalTransformationTosca.svg" %}')" class="h-[283px] hidden md:block">
+        <div style="background-image: url('{% static "image/public/backgroundDigitalTransformationTosca.svg" %}')" class="h-[283px] hidden md:block bg-no-repeat bg-center bg-cover">
           <div class="container px-20 py-16">
             <img src="{% static 'image/public/YourDigitalTransfoemationPartner.svg' %}" alt="" />
             <Button class="ml-6 mt-6 px-7 py-5 border bg-[#d20008] text-xl text-white rounded-sm hover:bg-[#b3020f] font-medium transition duration-300">Book a chat</Button>
@@ -160,8 +160,8 @@
       </div>
     </div>
     {% comment %} After Footer {% endcomment %}
-        <div style="background-image: url('{% static "image/public/bgAfterFooterTosca.svg" %}')" class="h-[720px] shadow-black hidden md:block">
-          <div class="container px-64 pt-72">
+        <div style="background-image: url('{% static "image/public/bgAfterFooterTosca.svg" %}')" class="h-[720px] shadow-black hidden md:flex justify-center items-center bg-no-repeat bg-center bg-cover">
+          <div class="">
             <h1 class="text-5xl font-bold mb-4">Tetap Terhubung Bersama Kami</h1>
             <p class="text-2xl pr-20 mb-4">Sign up for the lat­est up­dates to our Way of Working, case stud­ies, and more.</p>
             <div>
