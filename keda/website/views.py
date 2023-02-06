@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from website.forms import *
-from django.http import HttpResponse
+from django.http import JsonResponse
 
 # Create your views here.
 def index(request):
@@ -167,6 +167,12 @@ def detailCareer(request, slug_career):
             'form_subs' : form_subs,
         }
         return render(request, 'detailCareer.html', context)
+
+def searchCareer(request, *args, **kwargs):
+    data = dict()
+    data["searchCareers"] = Career.objects.filter(career_name=request["career_name"])
+    return JsonResponse(data)
+
 
 def detailBlog(request, slug_blog):
     if request.POST:
