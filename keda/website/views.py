@@ -67,7 +67,7 @@ def aboutCareer(request):
     if request.POST:
         form = SubscriptionForm(request.POST)
         if form.is_valid():
-            careers = Career.objects.select_related('career_tag_id', 'career_tag_id__color_id').filter(status=1)
+            careers = Career.objects.select_related('career_tag_id', 'career_tag_id__color_id').filter(status=1).order_by('-datetime')
             form.save()
             form = SubscriptionForm()
             message = "berhasil"
@@ -81,7 +81,7 @@ def aboutCareer(request):
         else:
             form = SubscriptionForm()
             message = "error"
-            careers = Career.objects.select_related('career_tag_id', 'career_tag_id__color_id').filter(status=1)
+            careers = Career.objects.select_related('career_tag_id', 'career_tag_id__color_id').filter(status=1).order_by('-datetime')
             context = {
                 'form' : form,
                 'message' : message,
@@ -91,7 +91,7 @@ def aboutCareer(request):
 
     else:
         form = SubscriptionForm()
-        careers = Career.objects.select_related('career_tag_id', 'career_tag_id__color_id').filter(status=1)
+        careers = Career.objects.select_related('career_tag_id', 'career_tag_id__color_id').filter(status=1).order_by('-datetime')
         context = {
             'form' : form,
             'careers' : careers,
@@ -293,7 +293,19 @@ def aboutTeam(request):
 
     else:
         form = SubscriptionForm()
+        category = Categories.objects.all()
+        teams = Team.objects.all()
+        webAndApps = Team.objects.all().filter(categories_id=1)
+        contentAndMedias = Team.objects.all().filter(categories_id=2)
+        businessAndDevelopments = Team.objects.all().filter(categories_id=3)
+        productDesigns = Team.objects.all().filter(categories_id=4)
         context = {
+            'categories' : category,
+            'teams' : teams,
+            'webAndApps' : webAndApps,
+            'contentAndMedias' : contentAndMedias,
+            'businessAndDevelopments' : businessAndDevelopments,
+            'productDesigns' : productDesigns,
             'form' : form,
         }
         return render(request, 'aboutTeam.html', context)
@@ -333,8 +345,8 @@ def blog(request):
         if form.is_valid():
             form.save()
             form = SubscriptionForm()
-            blogs = Blog.objects.select_related('blog_tag', 'blog_tag__color_id')
-            trendings = Blog.objects.select_related('blog_tag', 'blog_tag__color_id').order_by("?")[:4]
+            blogs = Blog.objects.select_related('blog_tag', 'blog_tag__color_id').filter(status=1).order_by('-datetime')
+            trendings = Blog.objects.select_related('blog_tag', 'blog_tag__color_id').filter(status=1).order_by("?")[:4]
             message = 'berhasil'
             context = {
                 'blogs' : blogs,
@@ -346,8 +358,8 @@ def blog(request):
 
         else:
             form = SubscriptionForm()
-            blogs = Blog.objects.select_related('blog_tag', 'blog_tag__color_id')
-            trendings = Blog.objects.select_related('blog_tag', 'blog_tag__color_id').order_by("?")[:4]
+            blogs = Blog.objects.select_related('blog_tag', 'blog_tag__color_id').filter(status=1).order_by('-datetime')
+            trendings = Blog.objects.select_related('blog_tag', 'blog_tag__color_id').filter(status=1).order_by("?")[:4]
             message = 'error'
             context = {
                 'blogs' : blogs,
@@ -359,8 +371,8 @@ def blog(request):
 
     else:
         form = SubscriptionForm()
-        blogs = Blog.objects.select_related('blog_tag', 'blog_tag__color_id')
-        trendings = Blog.objects.select_related('blog_tag', 'blog_tag__color_id').order_by("?")[:4]
+        blogs = Blog.objects.select_related('blog_tag', 'blog_tag__color_id').filter(status=1).order_by('-datetime')
+        trendings = Blog.objects.select_related('blog_tag', 'blog_tag__color_id').filter(status=1).order_by("?")[:4]
         context = {
             'blogs' : blogs,
             'trendings' : trendings,
@@ -466,3 +478,33 @@ def processNextSteps(request):
 
 def detailProject(request):
     return render(request, 'detailProject.html')
+
+def detailTechnologies(request):
+    if request.POST:
+        form = SubscriptionForm(request.POST)
+        if form.is_valid():
+            form.save()
+            form = SubscriptionForm()
+            message = "berhasil"
+            context = {
+                'form' : form,
+                'message' : message,
+            }
+            return render(request, 'detailTechnologies.html', context)
+
+        else:
+            form = SubscriptionForm()
+            message = "error"
+            context = {
+                'form' : form,
+                'message' : message,
+            }
+            return render(request, 'detailTechnologies.html', context)
+
+    else:
+        form = SubscriptionForm()
+        context = {
+            'form' : form,
+        }
+        return render(request, 'detailTechnologies.html', context)
+

@@ -182,6 +182,8 @@ JAZZMIN_SETTINGS = {
 
     "related_modal_active": True,
 
+    "order_with_respect_to": ['Candidates'],
+
     #"search_model": ["website.Blog","website.Candidate","website.Subscription"],
     
 

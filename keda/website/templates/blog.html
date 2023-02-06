@@ -34,17 +34,20 @@
                 <div class="col-span-9">
                     <div class=" md:grid md:grid-cols-2 gap-10 py-5">
                       {% for blog in blogs %}
-                        <div class="grid gap-5 py-5">
-                            <img src="{{ blog.image_blog.url }}" alt="" class="object-center object-cover w-full h-[308px]"/>
-                            <p style="background-color : {{ blog.blog_tag.color_id.hex_code }}" class="text-white rounded-full py-1 px-4 w-fit">{{ blog.blog_tag}}</p>
-                            <h3 class="text-xl font-bold">{{ blog.blog_header }}</h3>
-                            <p>{{ blog.description|safe|truncatechars:200 }}</p>
-                            <Button onclick="window.location.href = '{% url "detailBlog" blog.slug_blog %}';" class="w-full px-4 py-2 border bg-[#d20008] border-white text-white rounded hover:bg-[#b3020f] hover:border-[#d20008] text-sm font-medium transition duration-300"><span class="flex justify-center items-center"><p class="mr-3">Baca Selengkapnya</p> <img src="{% static "image/public/lebihDari.svg" %}" alt="" class="mt-1"/></span></Button>
+                        <div {% if forloop.counter > 3 %} class='blog hidden' {% endif %}>
+                          <div class="grid gap-5 py-5">
+                              <img src="{{ blog.image_blog.url }}" alt="" class="object-center object-cover w-full h-[308px]"/>
+                              <p style="background-color : {{ blog.blog_tag.color_id.hex_code }}" class="text-white rounded-full py-1 px-4 w-fit">{{ blog.blog_tag}}</p>
+                              <h3 class="text-xl font-bold">{{ blog.blog_header }}</h3>
+                              <p>{{ blog.description|safe|truncatechars:200 }}</p>
+                              <Button onclick="window.location.href = '{% url "detailBlog" blog.slug_blog %}';" class="w-full px-4 py-2 border bg-[#d20008] border-white text-white rounded hover:bg-[#b3020f] hover:border-[#d20008] text-sm font-medium transition duration-300"><span class="flex justify-center items-center"><p class="mr-3">Baca Selengkapnya</p> <img src="{% static "image/public/lebihDari.svg" %}" alt="" class="mt-1"/></span></Button>
+                          </div>
                         </div>
+                        
                       {% endfor %}
                     </div>
                     <div class="flex justify-center items-center md:py-8">
-                        <Button class="mt-5 rounded py-1 w-[128px] border bg-[#555555] text-white hover:bg-[#444444] font-medium transition duration-300">Load more</Button>
+                        <button value="{{blogs|length}}" id="loadMore" name="loadMore" class="mt-5 rounded py-1 w-[128px] border bg-[#555555] text-white hover:bg-[#444444] font-medium transition duration-300">Load more</button>
                     </div>
                 </div>
                 <div class="col-span-3 bg-[#f8f8f8] p-5 hidden md:block">

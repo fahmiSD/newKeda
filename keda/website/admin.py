@@ -12,7 +12,6 @@ admin.site.register(Subscription, SubsAdmin)
 
 admin.site.register(Color)
 
-
 class PositionAdmin(admin.ModelAdmin):
     list_display = ['position']
 admin.site.register(Position, PositionAdmin)
