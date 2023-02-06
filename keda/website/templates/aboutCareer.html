@@ -95,8 +95,7 @@
             </div>
             <div class="md:grid grid-cols-2 gap-10">
 
-              {% for career in careers %}
-              
+              {% comment %} {% for career in careers %}
               
              <Card class="p-8 block w-full py-5 rounded-xl bg-white shadow-md mb-9 md:mb-0">
                 <div>
@@ -111,15 +110,47 @@
                </div>
               </Card>
               
+              {% endfor %} {% endcomment %}
+
+              {% for career in careers %}
+              
+              <div {% if forloop.counter > 4  %} class='career hidden'{% endif %}>
+                <Card class="p-8 block w-full py-5 rounded-xl bg-white shadow-md mb-9 md:mb-0">
+                  <div>
+                    <div class="flex justify-between mb-3">
+                      <h1 class="text-2xl font-bold">{{ career.career_name }}</h1>
+                      <img src="{% static "image/public/3dot.svg" %}" alt="" />
+                    </div>
+                    <p style="background-color: {{ career.career_tag_id.color_id.hex_code }};" class=" w-[132px] py-1 text-center rounded-full text-white mb-3">{{ career.career_tag_id.career_tag_name }}</p>
+                    <p class="text-lg">{{ career.description|safe|truncatechars:140 }}</p>
+                    <p class="text-lg font-semibold">Apply before: {{career.deadline}}</p>
+                    <Button onclick="window.location.href = '{% url "detailCareer" career.slug_career %}';" href="" class="mt-5 py-2 w-full border bg-[#d20008] text-white rounded-md hover:bg-[#b3020f] font-medium transition duration-300">Apply Now </Button>
+                </div>
+                </Card>
+              </div>
               {% endfor %}
 
             </div>
+
+            {% if careers|length != 0 %}
+
+            <div class="flex justify-center items-center md:py-8">
+                <button value="{{careers|length}}" id="loadMoreCareer" name="loadMoreCareer" class="mt-5 rounded py-1 w-[128px] border bg-[#555555] text-white hover:bg-[#444444] font-medium transition duration-300">Load more</button>
+            </div>
+
+            {% else %}
+            
+            <div class="flex justify-center items-center md:py-8">
+                <p>Sorry, There's no data available...</p>   
+            </div>
+
+            {% endif %}
         </div>
     {% comment %} Digital Transformation {% endcomment %}
         <div style="background-image: url('{% static "image/public/backgroundDigitalTransformationTosca.svg" %}')" class="h-[283px] hidden md:block">
           <div class="container px-20 py-16">
             <img src="{% static 'image/public/YourDigitalTransfoemationPartner.svg' %}" alt="" />
-            <Button class="ml-6 mt-6 px-7 py-5 border bg-[#d20008] text-xl text-white rounded-sm hover:bg-[#b3020f] font-medium transition duration-300">Book a chat</Button>
+            <Button onclick="window.location.href = '{% url "consultation" %}';" class="ml-6 mt-6 px-7 py-5 border bg-[#d20008] text-xl text-white rounded-sm hover:bg-[#b3020f] font-medium transition duration-300">Book a chat</Button>
           </div>
         </div>
         <div style="background-image: url('{% static "image/public/backgroundDigitalTransformationToscaSmall.svg" %}')" class="h-[656px] bg-no-repeat bg-center bg-cover md:hidden">

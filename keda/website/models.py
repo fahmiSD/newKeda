@@ -68,7 +68,7 @@ class Blog_tag(models.Model):
         return self.blog_tag_name
 
 class Blog(models.Model):
-    blog_header = models.CharField(max_length=300)
+    blog_header = models.CharField(max_length=300, unique=True)
     blog_tag = models.ForeignKey(Blog_tag, on_delete=models.CASCADE)
     image_blog = models.ImageField(upload_to='blog/')
     description = RichTextUploadingField()
@@ -94,7 +94,7 @@ class Career_tag(models.Model):
         return self.career_tag_name
 
 class Career(models.Model):
-    career_name = models.CharField(max_length=300)
+    career_name = models.CharField(max_length=300, unique=True)
     career_tag_id = models.ForeignKey(Career_tag, on_delete=models.CASCADE)
     description = RichTextUploadingField()
     deadline = models.DateField(null=True)
