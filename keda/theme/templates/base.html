@@ -269,6 +269,17 @@
 
                 
               });
+
+              document.querySelectorAll('.outers .career-tag').forEach(function(el) {
+                //compare 
+                if (el.textContent.toLowerCase().indexOf(inputs) > -1) {
+                  el.closest('.outers').style.visibility = 'visible' ;
+                  el.closest('.outers').style.display = 'block';
+                  //if match show that div
+                }
+
+                
+              });
             });
       }); // end document ready
 
