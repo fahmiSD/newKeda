@@ -773,6 +773,14 @@ select {
   z-index: 10;
 }
 
+.z-40 {
+  z-index: 40;
+}
+
+.z-30 {
+  z-index: 30;
+}
+
 .col-span-2 {
   grid-column: span 2 / span 2;
 }
@@ -1048,6 +1056,22 @@ select {
 
 .h-\[880px\] {
   height: 880px;
+}
+
+.h-\[5px\] {
+  height: 5px;
+}
+
+.h-\[8px\] {
+  height: 8px;
+}
+
+.h-10 {
+  height: 2.5rem;
+}
+
+.h-\[10px\] {
+  height: 10px;
 }
 
 .w-\[72px\] {
@@ -1729,6 +1753,11 @@ select {
   padding-right: 4rem;
 }
 
+.py-0 {
+  padding-top: 0px;
+  padding-bottom: 0px;
+}
+
 .pl-3 {
   padding-left: 0.75rem;
 }
@@ -2009,9 +2038,24 @@ select {
   --tw-shadow: var(--tw-shadow-colored);
 }
 
+.shadow-gray-500\/50 {
+  --tw-shadow-color: rgb(107 114 128 / 0.5);
+  --tw-shadow: var(--tw-shadow-colored);
+}
+
+.shadow-gray-700\/50 {
+  --tw-shadow-color: rgb(55 65 81 / 0.5);
+  --tw-shadow: var(--tw-shadow-colored);
+}
+
 .shadow-gray-800\/50 {
   --tw-shadow-color: rgb(31 41 55 / 0.5);
   --tw-shadow: var(--tw-shadow-colored);
+}
+
+.drop-shadow {
+  --tw-drop-shadow: drop-shadow(0 1px 2px rgb(0 0 0 / 0.1)) drop-shadow(0 1px 1px rgb(0 0 0 / 0.06));
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 
 .drop-shadow-lg {
@@ -2022,6 +2066,15 @@ select {
 .drop-shadow-xl {
   --tw-drop-shadow: drop-shadow(0 20px 13px rgb(0 0 0 / 0.03)) drop-shadow(0 8px 5px rgb(0 0 0 / 0.08));
   filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.drop-shadow-2xl {
+  --tw-drop-shadow: drop-shadow(0 25px 25px rgb(0 0 0 / 0.15));
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
+}
+
+.filter-none {
+  filter: none;
 }
 
 .transition {
@@ -2629,5 +2682,10 @@ select {
 
   .md\:leading-normal {
     line-height: 1.5;
+  }
+
+  .md\:drop-shadow-lg {
+    --tw-drop-shadow: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
+    filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
   }
 }

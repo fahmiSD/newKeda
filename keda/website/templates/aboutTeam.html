@@ -1,4 +1,7 @@
-{% extends 'base.html' %} {% load static %} {% block content %}
+{% extends 'base.html' %} 
+{% block tentang %}font-bold{% endblock tentang %}
+{% load static %} 
+{% block content %}
     <div>
       {% comment %} Profile Team {% endcomment %}
         <div style="background-image: url('{% static "image/public/bgAboutStory.svg" %}')" class="hidden md:flex justify-center items-center h-[609px] bg-center bg-cover bg-no-repeat drop-shadow-lg">

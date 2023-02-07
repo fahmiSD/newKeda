@@ -60,7 +60,7 @@
                 <p class="text-white px-5 cursor-pointer {% block beranda %}{% endblock beranda %}">Beranda</p>
               </a>
               <div class="flex">
-                  <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class="text-white font-medium rounded-lg text-sm px-4 py-2.5 text-center flex items-center cursor-pointer" type="button"><p>Tentang</p>
+                  <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class="text-white font-medium rounded-lg text-sm px-4 py-2.5 text-center flex items-center cursor-pointer {% block tentang %}{% endblock tentang %}" type="button"><p>Tentang</p>
                     <img src="{% static "image/public/tentang.svg" %}" alt="" class="m-0 pl-3 pt-1"/></button>
                   <!-- Dropdown menu -->
                   <div id="dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-30">
@@ -82,16 +82,16 @@
               </div>
 
               <a href="/processOverview">
-                <p class="text-white px-5 cursor-pointer">Proses</p>
+                <p class="text-white px-5 cursor-pointer {% block proses %}{% endblock proses %}">Proses</p>
               </a>
               <a href="/solution">
-                <p class="text-white px-5 cursor-pointer">Solusi</p>
+                <p class="text-white px-5 cursor-pointer {% block solusi %}{% endblock solusi %}">Solusi</p>
               </a>
               <a href="/project">
-                <p class="text-white px-5 cursor-pointer">Proyek</p>
+                <p class="text-white px-5 cursor-pointer {% block proyek %}{% endblock proyek %}">Proyek</p>
               </a>
               <a href="/blog">
-              <p class="text-white px-5 cursor-pointer">Blog</p>
+              <p class="text-white px-5 cursor-pointer {% block blog %}{% endblock blog %}">Blog</p>
               </a>
               <p class="text-white px-5">
                 <img src="{% static "image/public/upTech.svg" %}" alt="logo" width={72} height={45} class='cursor-pointer'/>

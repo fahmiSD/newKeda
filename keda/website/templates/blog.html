@@ -1,4 +1,7 @@
-{% extends 'base.html' %} {% load static %} {% block content %}
+{% extends 'base.html' %}
+{% block blog %}font-bold{% endblock blog %} 
+{% load static %} 
+{% block content %}
     <div>
      {% comment %} Banner Blog  {% endcomment %}
         <div style="background-image: url('{% static "image/public/bgKeDABlog.svg" %}')" class="h-[641px] hidden md:block bg-center bg-cover bg-no-repeat">
