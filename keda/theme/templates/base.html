@@ -73,7 +73,7 @@
           <div class="md:flex justify-around items-center ">
             <div class="flex items-center bg-[#b3020f] rounded-full px-1 py-[0.4rem] mx-5">
               <a href="/">
-                <p class="text-white px-5 cursor-pointer">Beranda</p>
+                <p class="text-white px-5 cursor-pointer {% block beranda %}{% endblock beranda %}">Beranda</p>
               </a>
               <div class="flex">
                   <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class="text-white font-medium rounded-lg text-sm px-4 py-2.5 text-center flex items-center cursor-pointer" type="button"><p>Tentang</p>
@@ -150,7 +150,7 @@
                   <!-- Modal body -->
                   <div class="p-6 space-y-6">
                     <a href="/" class="">
-                      <p class="text-white text-center font-bold text-2xl mb-7">
+                      <p class="text-white text-center font-bold text-2xl mb-7 ">
                           Beranda
                       </p>
                     </a>
