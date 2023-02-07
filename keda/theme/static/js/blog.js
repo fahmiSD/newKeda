@@ -51,7 +51,7 @@ window.onload = function () {
 
             document.querySelectorAll('.outersBlog .blog-tag').forEach(function (el) {
                 //compare 
-                if (el.textContent.toLowerCase().indexOf(inputBlog) > -1) {
+                if (el.textContent.toLowerCase().indexOf(inputBlog) > git -1) {
                     el.closest('.outersBlog').style.visibility = 'visible';
                     el.closest('.outersBlog').style.display = 'block';
                     //if match show that div
