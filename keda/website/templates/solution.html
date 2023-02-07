@@ -1,4 +1,7 @@
-{% extends 'base.html' %} {% load static %} {% block content %}
+{% extends 'base.html' %} 
+{% block solusi %}font-bold{% endblock solusi %}
+{% load static %} 
+{% block content %}
     <div>
     {% comment %} banner  {% endcomment %}
         <div style="background-image: url('{% static "image/public/bannerSolution.svg" %}')" class="h-[329px] hidden md:block bg-center bg-cover bg-no-repeat">

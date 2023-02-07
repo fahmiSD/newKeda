@@ -1,4 +1,7 @@
-{% extends 'base.html' %} {% load static %} {% block content %}
+{% extends 'base.html' %}
+{% block tentang %}font-bold{% endblock tentang %} 
+{% load static %} 
+{% block content %}
     <div>
     {% comment %} About Us  {% endcomment %}
         <div style="background-image: url('{% static "image/public/bgAboutStory.svg" %}')" class="h-[609px] grid md:grid-cols-11 place-content-center place-items-center">
@@ -6,7 +9,7 @@
             <img src="{% static "image/public/imageAboutStory.svg" %}" alt="logo" class="w-screen md:w-[435px] md:h-[460px] object-cover"/>
           </div>
           <div class="md:col-span-6">
-            <div class="px-5 md:pr-36">
+            <div class="px-5 md:pr-36 py-3 md:py-0">
               <h1 class="mb-5 text-5xl font-bold">About Us</h1>
               <p>Berawal dari mimpi menjadi software house berstandar internasional, KeDA Tech hadir di tahun 2018. Selama pengembangannya, 
                 KeDA Tech percaya bahwa transformasi digital akan membawa banyak perubahan dalam segala aspek kehidupan. </p>

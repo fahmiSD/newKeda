@@ -1,4 +1,7 @@
-{% extends 'base.html' %} {% load static %} {% block content %}
+{% extends 'base.html' %} 
+{% block proses %}font-bold{% endblock proses %}
+{% load static %} 
+{% block content %}
     <div>
       {% comment %} Banner Working Style {% endcomment %}
         <div style="background-image: url('{% static "image/public/bgProcessOverview.svg" %}')" class="h-[202px] flex items-center justify-center px-8">

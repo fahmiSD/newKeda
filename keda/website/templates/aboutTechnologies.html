@@ -1,4 +1,7 @@
-{% extends 'base.html' %} {% load static %} {% block content %}
+{% extends 'base.html' %} 
+{% block tentang %}font-bold{% endblock tentang %}
+{% load static %} 
+{% block content %}
     <div>
     {% comment %} Image Technologies {% endcomment %}
         <div style="background-image: url('{% static "image/public/bannerTechnologies.svg" %}')" class="h-[329px] hidden md:block">
