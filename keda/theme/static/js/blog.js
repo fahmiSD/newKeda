@@ -38,7 +38,7 @@ window.onload = function () {
                 el.style.display = 'none';
             });
             //loop through outer ->card-title
-            document.querySelectorAll('.outersBlog .blogTitle').forEach(function (el) {
+            document.querySelectorAll('.outersBlog .blogTag').forEach(function (el) {
                 //compare 
                 if (el.textContent.toLowerCase().indexOf(inputBlog) > -1) {
 
@@ -49,9 +49,10 @@ window.onload = function () {
 
             });
 
-            document.querySelectorAll('.outersBlog .blog-tag').forEach(function (el) {
+            document.querySelectorAll('.outersBlog .blogTitle').forEach(function (el) {
                 //compare 
-                if (el.textContent.toLowerCase().indexOf(inputBlog) > git -1) {
+                if (el.textContent.toLowerCase().indexOf(inputBlog) > -1) {
+
                     el.closest('.outersBlog').style.visibility = 'visible';
                     el.closest('.outersBlog').style.display = 'block';
                     //if match show that div
