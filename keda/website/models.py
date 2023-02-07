@@ -53,6 +53,7 @@ class Consult(models.Model):
     name = models.CharField(max_length=300)
     business_sector = models.CharField(max_length=200)
     phone_number = PhoneNumberField()
+    phone_number.error_messages['invalid'] = 'Enter a valid phone number (e.g. +6289011011022)'
     email = models.EmailField(max_length=200)
     question = models.TextField()
     datetime = models.DateTimeField(auto_now_add=True)
@@ -121,6 +122,7 @@ class Candidate(models.Model):
     candidate_name = models.CharField(max_length=300)
     career_tag_id = models.ForeignKey(Career_tag, on_delete=models.CASCADE)
     whatsapp_number = PhoneNumberField()
+    whatsapp_number.error_messages['invalid'] = 'Enter a valid phone number (e.g. +6289011011022)'
     email = models.EmailField(max_length=200)
     cv = models.FileField(upload_to='candidate/')
     datetime = models.DateTimeField(auto_now_add=True)
