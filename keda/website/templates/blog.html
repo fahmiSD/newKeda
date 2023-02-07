@@ -89,12 +89,14 @@
                 <div class="col-span-3 bg-[#f8f8f8] p-5 hidden md:block rounded-sm">
                     <h1 class="text-2xl text-center font-semibold mb-4">Trending Article</h1>
                     {% for trending in trendings %}
-                      <div  class="grid gap-2 mb-4 cursor-pointer">
-                          <img src="{{ trending.image_blog.url }}" alt="" class="w-[246px] h[177px] object-center object-cover"/>
-                          <p style="background-color : {{ trending.blog_tag.color_id.hex_code }}" class="text-white rounded-full py-1 px-4 w-fit">{{ trending.blog_tag}}</p>
-                          <h3 class="text-xl font-bold">{{ trending.blog_header}}</h3>
-                          <p>{{ trending.description|safe|truncatechars:110 }}</p>
-                      </div>
+                      <a href="{% url "detailBlog" trending.slug_blog %}">
+                        <div class="grid gap-2 mb-4 cursor-pointer">
+                            <img src="{{ trending.image_blog.url }}" alt="" class="w-[246px] h[177px] object-center object-cover"/>
+                            <p style="background-color : {{ trending.blog_tag.color_id.hex_code }}" class="text-white rounded-full py-1 px-4 w-fit">{{ trending.blog_tag}}</p>
+                            <h3 class="text-xl font-bold">{{ trending.blog_header}}</h3>
+                            <p>{{ trending.description|safe|truncatechars:110 }}</p>
+                        </div>
+                      </a>
                     {% endfor %}
                 </div>
             </div>
