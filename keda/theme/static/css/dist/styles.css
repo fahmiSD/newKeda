@@ -2268,10 +2268,6 @@ select {
     width: 100%;
   }
 
-  .md\:w-\[559px\] {
-    width: 559px;
-  }
-
   .md\:w-\[292px\] {
     width: 292px;
   }
@@ -2286,6 +2282,10 @@ select {
 
   .md\:w-\[281px\] {
     width: 281px;
+  }
+
+  .md\:w-\[559px\] {
+    width: 559px;
   }
 
   .md\:w-\[703px\] {
