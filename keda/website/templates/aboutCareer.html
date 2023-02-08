@@ -78,7 +78,7 @@
             <div class=" md:grid grid-cols-2 place-content-between md:pb-16 pb-10">
                 
                 <Input type="text" id='searchCareer' name="searchCareer" placeholder="⌕ Search by position or tag" class="md:w-full w-[306px] py-2 rounded-sm border-gray-300 shadow-sm focus:ring-[#d20008] focus:border-gray-200 transition duration-300 mb-5 md:mb-0"/>
-                <div class="grid md:grid-cols-4 grid-cols-2 md:pl-10 items-center gap-4">
+                {% comment %} <div class="grid md:grid-cols-4 grid-cols-2 md:pl-10 items-center gap-4">
                     <div class="flex bg-[#d20008] justify-center items-center py-2 rounded-lg gap-3">
                         <p class="text-white">Programmer</p>
                         <p class="text-white">x</p>
@@ -95,7 +95,7 @@
                         <p class="text-white">Programmer</p>
                         <p class="text-white">x</p>
                     </div>
-                </div>
+                </div> {% endcomment %}
             </div>
             <div class="md:grid grid-cols-2 gap-10 ">
 
@@ -115,7 +115,7 @@
                     <div id="dropdownCareer" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-30">
                         <ul class="py-2 text-sm text-center text-black" aria-labelledby="dropdownDefaultButton">
                           <li>
-                            <a href="/aboutStory" class="block px-4 py-2 hover:bg-gray-100 cursor-pointer">Share</a>
+                            <button value="{% url "detailCareer" career.slug_career %}" class="copyClipboard block px-4 py-2 hover:bg-gray-100 cursor-pointer">Share</button>
                           </li>
                     </div>
                   </div>
@@ -149,56 +149,6 @@
             {% endif %}
         </div>    
 
-
-    {% comment %} Open Roles {% endcomment %}
-        {% comment %} <div class="bg-[white] md:py-28 md:px-16 px-10">
-            <div class="mb-14 hidden md:block">
-                <h1 class="text-5xl font-bold">Open Roles</h1>
-            </div>
-            <div class=" md:grid grid-cols-2 place-content-between md:pb-16 pb-10">
-                
-                <Input type="text" id='searchCareer' name="searchCareer" placeholder="⌕ Search" class="md:w-[559px] w-[306px] py-2 rounded-sm border-gray-300 shadow-sm focus:ring-[#d20008] focus:border-gray-200 transition duration-300 mb-5 md:mb-0"/>
-                <div class="grid md:grid-cols-4 grid-cols-2 md:pl-10 items-center gap-4">
-                    <div class="flex bg-[#d20008] justify-center items-center py-2 rounded-lg gap-3">
-                        <p class="text-white">Programmer</p>
-                        <p class="text-white">x</p>
-                    </div>
-                    <div class="flex bg-[#d20008] justify-center items-center py-2 rounded-lg gap-3">
-                        <p class="text-white">Programmer</p>
-                        <p class="text-white">x</p>
-                    </div>
-                    <div class="flex bg-[#d20008] justify-center items-center py-2 rounded-lg gap-3">
-                        <p class="text-white">Programmer</p>
-                        <p class="text-white">x</p>
-                    </div>
-                    <div class="flex bg-[#d20008] justify-center items-center py-2 rounded-lg gap-3">
-                        <p class="text-white">Programmer</p>
-                        <p class="text-white">x</p>
-                    </div>
-                </div>
-            </div>
-            <div class="md:grid grid-cols-2 gap-10">
-
-              {% for career in careers %}
-              
-              <div {% if forloop.counter > 4  %} class='career hidden'{% endif %}>
-                <Card class="p-8 block w-full py-5 rounded-xl bg-white shadow-md mb-9 md:mb-0">
-                  <div>
-                    <div class="flex justify-between mb-3">
-                      <h1 class="text-2xl font-bold">{{ career.career_name }}</h1>
-                      <img src="{% static "image/public/3dot.svg" %}" alt="" />
-                    </div>
-                    <p style="background-color: {{ career.career_tag_id.color_id.hex_code }};" class=" w-[132px] py-1 text-center rounded-full text-white mb-3">{{ career.career_tag_id.career_tag_name }}</p>
-                    <p class="text-lg">{{ career.description|safe|truncatechars:140 }}</p>
-                    <p class="text-lg font-semibold">Apply before: {{career.deadline}}</p>
-                    <Button onclick="window.location.href = '{% url "detailCareer" career.slug_career %}';" href="" class="mt-5 py-2 w-full border bg-[#d20008] text-white rounded-md hover:bg-[#b3020f] font-medium transition duration-300">Apply Now </Button>
-                </div>
-                </Card>
-              </div>
-              {% endfor %}
-
-            </div>
-        </div>
     {% comment %} Digital Transformation {% endcomment %}
         <div style="background-image: url('{% static "image/public/backgroundDigitalTransformationTosca.svg" %}')" class="h-[283px] hidden md:block bg-no-repeat bg-center bg-cover">
           <div class="container px-20 py-16">
@@ -296,5 +246,19 @@
         </div>
     </div>
 
+    <script>
+       
+        var items = document.querySelectorAll('.copyClipboard');
+        for(var i = 0; i<items.length; i++) {
+            (function () {
+                var copyText = items[i].value;
+                items[i].addEventListener("click", function() { console.log(copyText) }, false);
+            }()); 
+
+        }
+        
+    </script>
+
     <script src ="{% static 'js/career.js' %}"></script>
+    
 {% endblock content %}

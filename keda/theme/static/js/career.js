@@ -60,8 +60,23 @@ window.onload = function () {
             });
             //end of searchcareer
         });
+        // //end of searchcareer
+        // let buttons = document.querySelectorAll(".copyClipboard"); // quaryselectorall will return and nodelist of button with classnaem .unLockUser-button
+        // buttons.forEach((btn, index) => {// index will be current button index
+        //     btn.addEventListener("click", function (e) {
+        //         console.log(e.target, index);
+        //         console.log('hallo');
+        //     });
+        // })
 
-        //end of searchcareer
+
+        // $.each($('.copyClipboard'), function (i, val) {
+        //     var copyText = $(this).val();
+        //     console.log(copyText);
+        // });
+
+
     }); // end document ready
+
 
 }
