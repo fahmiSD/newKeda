@@ -6,7 +6,7 @@
             <div class="gap-10 py-5">
                 <div class="grid gap-5">
                     <p style="background-color : {{ blog.blog_tag.color_id.hex_code }}" class="text-white rounded-full py-1 px-4 w-fit">{{blog.blog_tag}}</p>
-                    <h3 class="text-xl font-bold">{{blog.blog_header}}</h3>
+                    <h3 class="text-4xl font-bold mb-4">{{blog.blog_header}}</h3>
                     <img src="{{ blog.image_blog.url }}" alt="" class="w-full"/>
                     <p>{{blog.description|safe}}</p>
                 </div>
