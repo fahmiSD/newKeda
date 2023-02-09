@@ -71,19 +71,19 @@
           </button>
         </div>
      {% comment %} Join Our Team {% endcomment %}
-        <div class=" md:bg-[#f8f8f8] md:h-[720px] pb-12 bg-white">
+        <div class=" bg-[#f8f8f8] h-[720px] md:px-16">
           <div class="md:grid md:grid-cols-12 place-content-center place-items-center">
-            <div class="col-span-5 md:hidden px-12 py-10">
-              <img src="{% static "image/public/WithMe.svg" %}" alt="logo" class=" w-[430px]"/>
+            <div class="px-8 pt-20 md:hidden mb-5">
+              <img src="{% static "image/public/WithMe.svg" %}" alt="logo" class=" w-[320px] md:hidden"/>
             </div>
-            <div class="col-span-7 container md:pl-24 md:pt-60 px-7 md:px-0">
-              <h1 class="mb-3 leading-snug md:text-5xl text-2xl font-bold">Tertarik untuk bergabung dengan kami?</h1>
-              <p class="mb-10">Kami selalu terbuka dengan talenta baru</p>
-              <button onclick="window.location.href = '{% url "aboutCareer" %}';"  class="px-6 py-2 border bg-[#d20008] text-white rounded-sm hover:bg-[#b3020f] hover:border-[#d20008] font-medium transition duration-300">Temukan posisi yang cocok</button>
-            </div>
-            <div class="col-span-5 mt-40 hidden md:block">
-              <img src="{% static "image/public/WithMe.svg" %}" alt="logo" class=" w-[430px]"/>
-            </div>
+          <div class="md:col-span-7 px-8 md:pt-52">
+            <h1 class="mb-3 leading-snug text-2xl md:text-6xl font-bold">Tertarik untuk bergabung dengan kami?</h1>
+            <p class="mb-10 md:text-2xl text-gray-600">Kami selalu terbuka dengan talenta baru</p>
+            <button onclick="window.location.href = '{% url "aboutCareer" %}';" class="px-6 py-2 border bg-[#d20008] text-white rounded-sm hover:bg-[#b3020f] hover:border-[#d20008] text-md font-bold transition duration-300">Temukan posisi yang cocok</button>
+          </div>
+          <div class="col-span-5 mt-40">
+            <img src="{% static "image/public/WithMe.svg" %}" alt="logo" class=" w-[430px] hidden md:block"/>
+          </div>
           </div>
         </div>
     {% comment %} Digital Tranformation {% endcomment %}
