@@ -35,6 +35,7 @@ urlpatterns = [
     path('processSupport/', processSupport, name='processSupport'),
     path('processNextSteps/', processNextSteps, name='processNextSteps'),
     path('aboutCareer/', aboutCareer, name='aboutCareer'),
+    path('fourzerofour/', fourzerofour, name='fourzerofour'),
     path('aboutTechnologies/', aboutTechnologies, name='aboutTechnologies'),
     path('detailTechnologies/', detailTechnologies, name='detailTechnologies'),
     path('detailMysql/', detailMysql, name='detailMysql'),

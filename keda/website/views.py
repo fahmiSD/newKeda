@@ -520,6 +520,9 @@ def processNextSteps(request):
 def detailProject(request):
     return render(request, 'detailProject.html')
 
+def fourzerofour(request):
+    return render(request, 'fourzerofour.html')
+
 
 def detailTechnologies(request):
     if request.POST:
