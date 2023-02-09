@@ -23,17 +23,18 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-a2-@&4pf!=b^dlj=q&-i%jeskmgb8(-&-u6+_dboz*k3j4p3_s'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = [
 
     '127.0.0.1',
     'localhost',
-
+    #'https://keda.senja.co.uk/'
 ]
 
 INTERNAL_IPS = [
     "127.0.0.1",
+    #"https://keda.senja.co.uk/"
 ]
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
@@ -131,7 +132,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Jakarta'
 
 USE_I18N = True
 

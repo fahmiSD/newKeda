@@ -36,6 +36,14 @@ def index(request):
         }
         return render(request, 'index.html', context)
 
+def not_found(request, exception=None):
+    return render(request, "404.html", {}, status=404)
+def error(request, exception=None):
+    return render(request, "404.html", {}, status=500)
+def permission_denied(request, exception = None):
+    return render(request, "404.html", {}, status=503)
+def bad_request(request, exception):
+    return render(request, "404.html", {}, status=400)
 
 def solution(request):
     if request.POST:
