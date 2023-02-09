@@ -78,24 +78,7 @@
             <div class=" md:grid grid-cols-2 place-content-between md:pb-16 pb-10">
                 
                 <Input type="text" id='searchCareer' name="searchCareer" placeholder="⌕ Search by position or tag" class="md:w-full w-[306px] py-2 rounded-sm border-gray-300 shadow-sm focus:ring-[#d20008] focus:border-gray-200 transition duration-300 mb-5 md:mb-0"/>
-                {% comment %} <div class="grid md:grid-cols-4 grid-cols-2 md:pl-10 items-center gap-4">
-                    <div class="flex bg-[#d20008] justify-center items-center py-2 rounded-lg gap-3">
-                        <p class="text-white">Programmer</p>
-                        <p class="text-white">x</p>
-                    </div>
-                    <div class="flex bg-[#d20008] justify-center items-center py-2 rounded-lg gap-3">
-                        <p class="text-white">Programmer</p>
-                        <p class="text-white">x</p>
-                    </div>
-                    <div class="flex bg-[#d20008] justify-center items-center py-2 rounded-lg gap-3">
-                        <p class="text-white">Programmer</p>
-                        <p class="text-white">x</p>
-                    </div>
-                    <div class="flex bg-[#d20008] justify-center items-center py-2 rounded-lg gap-3">
-                        <p class="text-white">Programmer</p>
-                        <p class="text-white">x</p>
-                    </div>
-                </div> {% endcomment %}
+               
             </div>
             <div class="md:grid grid-cols-2 gap-10 ">
 
@@ -115,7 +98,7 @@
                     <div id="dropdownCareer" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-30">
                         <ul class="py-2 text-sm text-center text-black" aria-labelledby="dropdownDefaultButton">
                           <li>
-                            <button value="{% url "detailCareer" career.slug_career %}" class="copyClipboard block px-4 py-2 hover:bg-gray-100 cursor-pointer">Share</button>
+                            <button value="{% url "detailCareer" career.slug_career %}" id="job{{ forloop.counter }}" onclick="copyClipboard(this.id)" class="block px-4 py-2 hover:bg-gray-100 cursor-pointer">Share</button>
                           </li>
                     </div>
                   </div>
@@ -246,17 +229,13 @@
         </div>
     </div>
 
-    <script>
+    <script type="text/javascript">
        
-        var items = document.querySelectorAll('.copyClipboard');
-        for(var i = 0; i<items.length; i++) {
-            (function () {
-                var copyText = items[i].value;
-                items[i].addEventListener("click", function() { console.log(copyText) }, false);
-            }()); 
+      function copyClipboard(shareBtnId){
 
-        }
-        
+          alert(shareBtnId);
+       
+      }
     </script>
 
     <script src ="{% static 'js/career.js' %}"></script>

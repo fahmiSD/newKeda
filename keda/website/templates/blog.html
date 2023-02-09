@@ -15,32 +15,13 @@
             <div class=" md:grid md:grid-cols-2 md:place-content-between md:py-10 pt-10 px-10">
                 <input type="text"  id='searchBlog' name="searchBlog"  placeholder="⌕ Search by title or tag blog" class="md:w-[559px] w-[306px] py-2 rounded-sm border-gray-300 shadow-sm focus:ring-[#d20008] focus:border-gray-200 transition duration-300 mb-5"/>
                 {% comment %} <Input type="text" id='searchBlogPage' name="searchBlogPage" placeholder="⌕ Search" class="md:w-[559px] w-[306px] py-2 rounded-sm border-gray-300 shadow-sm focus:ring-[#d20008] focus:border-gray-200 transition duration-300 mb-5 md:mb-0"/> {% endcomment %}
-                <div class="grid md:grid-cols-4 grid-cols-2 md:pl-10 items-center gap-4">
-                    <div class="flex bg-purple-600 justify-center items-center py-2 rounded-lg gap-3">
-                        <p class="text-white">Programmer</p>
-                        <p class="text-white">x</p>
-                    </div>
-                    <div class="flex bg-[#d20008] justify-center items-center py-2 rounded-lg gap-3">
-                        <p class="text-white">Programmer</p>
-                        <p class="text-white">x</p>
-                    </div>
-                    <div class="flex bg-[#d20008] justify-center items-center py-2 rounded-lg gap-3">
-                        <p class="text-white">Programmer</p>
-                        <p class="text-white">x</p>
-                    </div>
-                    <div class="flex bg-[#d20008] justify-center items-center py-2 rounded-lg gap-3">
-                        <p class="text-white">Programmer</p>
-                        <p class="text-white">x</p>
-                    </div>
-                </div>
+                
             </div>
 
             {% comment %} looping blog {% endcomment %}
             <div class="md:grid md:grid-cols-12 gap-10 md:px-12 px-7 py-6">
                 <div class="col-span-9">
                     <div class=" md:grid md:grid-cols-2 gap-10 py-5">
-
-
 
                       {% for blog in blogs %}
 
