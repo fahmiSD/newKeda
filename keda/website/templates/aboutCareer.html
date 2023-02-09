@@ -36,14 +36,17 @@
               </div>
           </div>
     {% comment %} Benefit {% endcomment %}
-        <div class="">
-            <div class="bg-white md:flex items-center justify-end pb-8 pt-12 px-10 hidden">
-                <p class="pr-4 text-2xl font-bold">1/6</p>
-                <img src="{% static "image/public/iconDetailTechnologies.svg" %}" alt="" />
+        <div id="carouselExampleCaptions" class="carousel slide relative" data-bs-ride="carousel">
+          <div class="carousel-inner relative w-full overflow-hidden">
+            <!-- work from anywhere -->
+            <div class="carousel-item active relative float-left w-full">
+            <div class="bg-white md:flex items-center justify-between pb-8 pt-12 px-10 hidden">
+                <h1 class="font-bold text-5xl">#LifeAtKeDA</h1>
+                <p class="pr-14 pb-2 text-2xl font-bold">1/5</p>
             </div>
             <div class="bg-white md:grid md:grid-cols-2 md:py-14 pt-14 place-content-center place-items-center">
                 <div class="md:hidden">
-                  <img src="{% static "image/public/workFromAnywhere.svg" %}" alt="" class="w-[490px]"/>
+                  <img src="{% static "image/public/workFromAnywhere.svg" %}" alt="" class="w-screen rounded-md"/>
                 </div>
                 <div class="md:py-20 md:pl-12 px-10 py-10">
                     <h1 class="md:text-5xl text-3xl font-bold mb-5">work from anywhere</h1>
@@ -53,6 +56,89 @@
                     <img src="{% static "image/public/workFromAnywhere.svg" %}" alt="" class="w-[490px]"/>
                 </div>
             </div>
+            </div>
+            <div class="carousel-item relative float-left w-full">
+              <div class="bg-white md:flex items-center justify-between pb-8 pt-12 px-10 hidden">
+                <h1 class="font-bold text-5xl">#LifeAtKeDA</h1>
+                <p class="pr-14 pb-2 text-2xl font-bold">2/5</p>
+            </div>
+            <div class="bg-white md:grid md:grid-cols-2 md:py-14 pt-14 place-content-center place-items-center">
+                <div class="md:hidden">
+                  <img src="{% static "image/public/newTechnologies.jpeg" %}" alt="" class="w-screen rounded-md"/>
+                </div>
+                <div class="md:py-20 md:pl-12 px-10 py-10">
+                    <h1 class="md:text-5xl text-3xl font-bold mb-5">Pelajari Teknologi Terbaru Bersama Kami</h1>
+                    <p class="md:pr-10 leading-normal md:text-2xl">Saat bergabung dalam KeDA Tech, Anda bisa bertumbuh dalam mempelajari teknologi terbaru. Selain itu, Anda juga bisa mendapatkan project yang membantu pertumbuhan karir profesional Anda.</p>
+                </div>
+                <div class="pl-24 hidden md:block">
+                    <img src="{% static "image/public/newTechnologies.jpeg" %}" alt="" class="w-[490px]"/>
+                </div>
+            </div>
+            </div>
+            <div class="carousel-item relative float-left w-full">
+              <div class="bg-white md:flex items-center justify-between pb-8 pt-12 px-10 hidden">
+                <h1 class="font-bold text-5xl">#LifeAtKeDA</h1>
+                <p class="pr-14 pb-2 text-2xl font-bold">3/5</p>
+            </div>
+            <div class="bg-white md:grid md:grid-cols-2 md:py-14 pt-14 place-content-center place-items-center">
+                <div class="md:hidden">
+                  <img src="{% static "image/public/dynamicTeam.jpeg" %}" alt="" class="w-screen rounded-md"/>
+                </div>
+                <div class="md:py-20 md:pl-12 px-10 py-10">
+                    <h1 class="md:text-5xl text-3xl font-bold mb-5">Tim Yang Dinamis</h1>
+                    <p class="md:pr-10 leading-normal md:text-2xl">Dengan tim yang dinamis, Anda tidak akan stuck di satu masa saja. Melainkan Anda bisa mendapatkan ilmu dan pengalaman terbaru dengan cara sharing bersama tim KeDA Tech.</p>
+                  </div>
+                <div class="pl-24 hidden md:block">
+                    <img src="{% static "image/public/dynamicTeam.jpeg" %}" alt="" class="w-[490px]"/>
+                </div>
+            </div>
+            </div>
+            <div class="carousel-item relative float-left w-full">
+              <div class="bg-white md:flex items-center justify-between pb-8 pt-12 px-10 hidden">
+                <h1 class="font-bold text-5xl">#LifeAtKeDA</h1>
+                <p class="pr-14 pb-2 text-2xl font-bold">4/5</p>
+            </div>
+            <div class="bg-white md:grid md:grid-cols-2 md:py-14 pt-14 place-content-center place-items-center">
+                <div class="md:hidden">
+                  <img src="{% static "image/public/UpdateTechnologies.jpeg" %}" alt="" class="w-screen rounded-md"/>
+                </div>
+                <div class="md:py-20 md:pl-12 px-10 py-10">
+                    <h1 class="md:text-5xl text-3xl font-bold mb-5">Teknologi Terkini</h1>
+                    <p class="md:pr-10 leading-normal md:text-2xl">Selalu siap dengan teknologi terkini, karena bekerja dalam KeDA Tech membutuhkan solusi yang inovatif dan tentunya diimbangi dengan teknologi paling terbaru.</p>
+                </div>
+                <div class="pl-24 hidden md:block">
+                    <img src="{% static "image/public/UpdateTechnologies.jpeg" %}" alt="" class="w-[490px]"/>
+                </div>
+            </div>
+            </div>
+            <div class="carousel-item relative float-left w-full">
+              <div class="bg-white md:flex items-center justify-between pb-8 pt-12 px-10 hidden">
+                <h1 class="font-bold text-5xl">#LifeAtKeDA</h1>
+                <p class="pr-14 pb-2 text-2xl font-bold">5/5</p>
+            </div>
+            <div class="bg-white md:grid md:grid-cols-2 md:py-14 pt-14 place-content-center place-items-center">
+                <div class="md:hidden">
+                  <img src="{% static "image/public/flexibleTimeWork.jpeg" %}" alt="" class="w-screen rounded-md"/>
+                </div>
+                <div class="md:py-20 md:pl-12 px-10 py-10">
+                    <h1 class="md:text-5xl text-3xl font-bold mb-5">Jam Kerja Fleksibel</h1>
+                    <p class="md:pr-10 leading-normal md:text-2xl">Karena bisa bekerja di mana saja, KeDA Tech menyediakan jam kerja yang fleksibel, yang bisa Anda atur sesuai keinginan. Asalkan tetap terhubung dengan KeDA Tech. Selain itu, #LifeAtKeDA juga memberikan bpjs kesehatan.</p>
+                </div>
+                <div class="pl-24 hidden md:block">
+                    <img src="{% static "image/public/flexibleTimeWork.jpeg" %}" alt="" class="w-[490px]"/>
+                </div>
+            </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-next absolute top-0 bottom-0 flex pt-12 pl-24 justify-center p-0 text-center border-0 hover:outline-none hover:no-underline focus:outline-none focus:no-underline right-0 text-black"
+            type="button"
+            data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next"
+          >
+            <img src="{% static "image/public/iconDetailTechnologies.svg" %}" alt=""/>
+            <span class="visually-hidden">Next</span>
+          </button>
         </div>
     {% comment %} Question Hiring Process {% endcomment %}
     <div class="bg-white drop-shadow-lg">
