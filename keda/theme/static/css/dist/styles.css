@@ -1062,6 +1062,14 @@ select {
   height: 44px;
 }
 
+.h-\[79px\] {
+  height: 79px;
+}
+
+.h-\[46px\] {
+  height: 46px;
+}
+
 .w-\[72px\] {
   width: 72px;
 }
@@ -1237,6 +1245,10 @@ select {
 
 .w-\[420pxpx\] {
   width: 420pxpx;
+}
+
+.w-\[739px\] {
+  width: 739px;
 }
 
 .max-w-7xl {
