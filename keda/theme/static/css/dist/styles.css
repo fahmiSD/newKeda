@@ -2671,6 +2671,10 @@ select {
     padding-top: 16rem;
   }
 
+  .md\:pt-52 {
+    padding-top: 13rem;
+  }
+
   .md\:text-left {
     text-align: left;
   }

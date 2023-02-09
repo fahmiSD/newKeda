@@ -58,7 +58,7 @@
         <div style="background-image: url('{% static "image/public/bgOurStory.svg" %}')" class="md:h-[609px] h-[800px] md:grid md:grid-cols-11 pt-10 md:pt-0 place-content-center place-items-center drop-shadow-lg">
           <div class="md:col-span-5 mb-5 md:mb-0">
             <img src="{% static "image/public/KennethNursalim.svg" %}" alt="logo" class=" md:w-[386px] md:h-[404px] w-[306px] h-[320px] ml-10 md:ml-0 mb-2"/>
-            <h1 class="text-center text-xl font-bold">Kenneth Nursalim</h1>
+            <p class="text-center text-xl font-bold">Kenneth Nursalim</p>
             <p class="text-center ">Owner & CEO of KeDA Tech</p>
           </div>
           <div class="md:col-span-6">
@@ -78,20 +78,20 @@
           <div class="md:col-span-7">
             <div class="">
               <h1 class="mb-6 font leading-snug text-2xl md:text-5xl font-bold">Sincerely doing the best for your digital business.</h1>
-              <button onclick="window.location.href = '{% url "aboutTeam" %}';" class="px-6 py-2 md:ml-5 border bg-[#d20008] text-white rounded-sm hover:bg-[#b3020f] hover:border-[#d20008] text-sm font-medium transition duration-300">Meet the Team</button>
+              <button onclick="window.location.href = '{% url "aboutTeam" %}';" class="px-6 py-2 border bg-[#d20008] text-white rounded-sm hover:bg-[#b3020f] hover:border-[#d20008] text-sm font-medium transition duration-300">Meet the Team</button>
             </div>
           </div>
         </div>
     {% comment %} Join Our Team {% endcomment %}
-        <div class=" bg-[#f8f8f8] h-[720px]">
+        <div class=" bg-[#f8f8f8] h-[720px] md:px-16">
           <div class="md:grid md:grid-cols-12 place-content-center place-items-center">
-            <div class="pl-8 pt-20 md:hidden">
+            <div class="px-8 pt-20 md:hidden mb-5">
               <img src="{% static "image/public/WithMe.svg" %}" alt="logo" class=" w-[320px] md:hidden"/>
             </div>
-          <div class="md:col-span-7 pl-8 md:pt-60">
-            <h1 class="mb-3 leading-snug text-2xl md:text-5xl font-bold">Tertarik untuk bergabung dengan kami?</h1>
-            <p class="mb-10">Kami selalu terbuka dengan talenta baru</p>
-            <button onclick="window.location.href = '{% url "aboutCareer" %}';" class="px-6 py-2 border bg-[#d20008] text-white rounded-sm hover:bg-[#b3020f] hover:border-[#d20008] text-sm font-medium transition duration-300">Temukan posisi yang cocok</button>
+          <div class="md:col-span-7 px-8 md:pt-52">
+            <h1 class="mb-3 leading-snug text-2xl md:text-6xl font-bold">Tertarik untuk bergabung dengan kami?</h1>
+            <p class="mb-10 md:text-2xl text-gray-600">Kami selalu terbuka dengan talenta baru</p>
+            <button onclick="window.location.href = '{% url "aboutCareer" %}';" class="px-6 py-2 border bg-[#d20008] text-white rounded-sm hover:bg-[#b3020f] hover:border-[#d20008] text-md font-bold transition duration-300">Temukan posisi yang cocok</button>
           </div>
           <div class="col-span-5 mt-40">
             <img src="{% static "image/public/WithMe.svg" %}" alt="logo" class=" w-[430px] hidden md:block"/>
