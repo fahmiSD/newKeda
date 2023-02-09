@@ -1090,6 +1090,14 @@ select {
   height: 682px;
 }
 
+.h-\[46px\] {
+  height: 46px;
+}
+
+.h-\[79px\] {
+  height: 79px;
+}
+
 .max-h-\[629px\] {
   max-height: 629px;
 }
@@ -1277,6 +1285,10 @@ select {
 
 .w-\[420pxpx\] {
   width: 420pxpx;
+}
+
+.w-\[739px\] {
+  width: 739px;
 }
 
 .max-w-7xl {
@@ -1895,6 +1907,10 @@ select {
 
 .pt-9 {
   padding-top: 2.25rem;
+}
+
+.pt-3 {
+  padding-top: 0.75rem;
 }
 
 .text-center {
