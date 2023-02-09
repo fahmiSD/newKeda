@@ -1098,6 +1098,10 @@ select {
   height: 79px;
 }
 
+.h-screen {
+  height: 100vh;
+}
+
 .max-h-\[629px\] {
   max-height: 629px;
 }
@@ -1585,6 +1589,10 @@ select {
 
 .bg-\[fbfbfb\] {
   background-color: fbfbfb;
+}
+
+.bg-\[\#\] {
+  background-color: #;
 }
 
 .bg-cover {
@@ -2613,6 +2621,21 @@ select {
   .md\:px-28 {
     padding-left: 7rem;
     padding-right: 7rem;
+  }
+
+  .md\:py-2 {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .md\:py-1 {
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+  }
+
+  .md\:px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
   .md\:pl-12 {
