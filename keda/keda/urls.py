@@ -20,6 +20,8 @@ from django.conf import settings
 from django.conf.urls.static import static
 from website.views import *
 from django.urls import path, include, re_path
+from django.conf.urls import (handler400, handler403, handler404, handler500)
+import website
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -35,12 +37,12 @@ urlpatterns = [
     path('processSupport/', processSupport, name='processSupport'),
     path('processNextSteps/', processNextSteps, name='processNextSteps'),
     path('aboutCareer/', aboutCareer, name='aboutCareer'),
-    path('fourzerofour/', fourzerofour, name='fourzerofour'),
+    # path('fourzerofour/', fourzerofour, name='fourzerofour'),
     path('aboutTechnologies/', aboutTechnologies, name='aboutTechnologies'),
     path('detailTechnologies/', detailTechnologies, name='detailTechnologies'),
     path('detailMysql/', detailMysql, name='detailMysql'),
     path('detailPython/', detailPython, name='detailPython'),
-    path('detailBlog/<slug:slug_blog>', detailBlog, name='detailBlog'),
+    path('detailBlog/(?P<slug_blog>[-a-zA-Z0-9_]+)\\Z', detailBlog, name='detailBlog'),
     path('project/', project, name='project'),
     path('detailProject/', detailProject, name='detailProject'),
     path('aboutStory/', aboutStory, name='aboutStory'),
@@ -52,6 +54,11 @@ urlpatterns = [
     path("__reload__/", include("django_browser_reload.urls")),
 
 ]
+
+handler404 = 'website.views.not_found'
+handler500 = 'website.views.error'
+handler403 = 'website.views.permission_denied'
+handler400 = 'website.views.bad_request'
 
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL,
